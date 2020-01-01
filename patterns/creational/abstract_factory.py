@@ -1,33 +1,38 @@
 """
-*What is this pattern about?
+* ¿De que trata este patrón?
 
-In Java and other languages, the Abstract Factory Pattern serves to provide an interface for
-creating related/dependent objects without need to specify their
-actual class.
+En Java y otros lenguajes, el "Patrón Factoría Abstracta", provee un interfaz 
+para la creación de objetos relacionados/dependientes sin necesidad de 
+especificar la clase actual.
 
-The idea is to abstract the creation of objects depending on business
-logic, platform choice, etc.
+La idea es abstraer la creación de objetos de la lógica de negocio, la plataforma 
+elegida, etc.
 
-In Python, the interface we use is simply a callable, which is "builtin" interface
-in Python, and in normal circumstances we can simply use the class itself as
-that callable, because classes are first class objects in Python.
 
-*What does this example do?
-This particular implementation abstracts the creation of a pet and
-does so depending on the factory we chose (Dog or Cat, or random_animal)
-This works because both Dog/Cat and random_animal respect a common
-interface (callable for creation and .speak()).
-Now my application can create pets abstractly and decide later,
-based on my own criteria, dogs over cats.
+En Python, el interfaz que nosotros usamos es simplemente un "callable", el cual es un interfaz
+"builtin" en Python. En circunstancias normales nosotros podemos usar la propia clase como
+"callable", puesto que en Python las clases en primera instancia, son clases de "object".
 
-*Where is the pattern used practically?
+*¿Que hace este ejemplo?
 
-*References:
+Esta implementación particular abstrae la creación de una mascota dependiendo 
+de la factoría seleccionada, teniendo disponibles (Perros, Gatos o Animales aleatorios)
+
+Esto funciona dado que tanto Perro/Gato como "Animal Aleatorio", 
+respetan una interfaz común de creación (llamable para creación y función .speak()).
+
+Ahora my aplicación puede crear mascotas de forma abstracta y decidir su naturaleza después
+basándose en mi propio criterio, perros o gatos. 
+
+
+*¿Donde es usado este patrón de forma practica?
+
+*Referencias:
 https://sourcemaking.com/design_patterns/abstract_factory
 http://ginstrom.com/scribbles/2007/10/08/design-patterns-python-style/
 
 *TL;DR
-Provides a way to encapsulate a group of individual factories.
+Proporciona una forma de encapsular un grupo o una factoría. 
 """
 
 import random
@@ -35,15 +40,15 @@ import random
 
 class PetShop:
 
-    """A pet shop"""
+    """Una tienda de mascotas"""
 
     def __init__(self, animal_factory=None):
-        """pet_factory is our abstract factory.  We can set it at will."""
+        """pet_factory es nuestra factoría abstracta. Podemos configurarlo a voluntad."""
 
         self.pet_factory = animal_factory
 
     def show_pet(self):
-        """Creates and shows a pet using the abstract factory"""
+        """Creamos y mostramos mascotas usando factorías abstractas"""
 
         pet = self.pet_factory()
         print("We have a lovely {}".format(pet))
@@ -66,23 +71,23 @@ class Cat:
         return "Cat"
 
 
-# Additional factories:
+# Factorías adicionales:
 
-# Create a random animal
+# Crea un animal aleatorio
 def random_animal():
-    """Let's be dynamic!"""
+    """Puede ser dinámico!"""
     return random.choice([Dog, Cat])()
 
 
-# Show pets with various factories
+# Mostramos mascotas de varias factorías.
 if __name__ == "__main__":
 
-    # A Shop that sells only cats
+    # Una tienda que vende solo gatos.
     cat_shop = PetShop(Cat)
     cat_shop.show_pet()
     print("")
 
-    # A shop that sells random animals
+    # Una tienda que vende animales aleatorios.
     shop = PetShop(random_animal)
     for i in range(3):
         shop.show_pet()

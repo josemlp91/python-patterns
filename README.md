@@ -1,16 +1,30 @@
 python-patterns
 ===============
 
-A collection of design patterns and idioms in Python.
+Una colección de patrones de diseño e "idioms" en Python.
+Este proyecto esta basado completamente en [faif/python-patterns](https://github.com/faif/python-patterns) en su versión en Ingles, los objetivos de mi traducción son varios.
 
-Current Patterns
+- Ayudar a programadores de habla hispana.
+- Profundizar al máximo en el aprendizaje de patrones de diseño en Python.
+- Mejorar mi comprensión del Ingles.
+
+Disclaimer
 ----------------
 
-__Creational Patterns__:
+Es un proyecto de aprendizaje personal y puede contener errores en la traducción o interpretación
+de los patrones que se explican, ante la posible duda recomiendo acudir a la referencia original.
+También se agradece feedback positivo, mediante "issues" o "pull-requests".
 
-| Pattern | Description |
+
+Patrones actuales
+----------------
+
+__Patrones de creación__:
+
+| Patrón | Descripción |
 |:-------:| ----------- |
-| [abstract_factory](patterns/creational/abstract_factory.py) | use a generic function with specific factories |
+| [abstract_factory](patterns/creational/abstract_factory.py) | usa una función genérica mediante una factoría específica |
+
 | [borg](patterns/creational/borg.py) | a singleton with shared-state among instances |
 | [builder](patterns/creational/builder.py) | instead of using multiple constructors, builder object receives parameters and returns constructed objects |
 | [factory](patterns/creational/factory.py) | delegate a specialized function/method to create instances |
