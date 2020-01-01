@@ -1,19 +1,19 @@
 python-patterns
 ===============
 
-Una colección de patrones de diseño e "idioms" en Python.
+Una colección de patrones de diseño e __"idioms"__ en Python.
 Este proyecto esta basado completamente en [faif/python-patterns](https://github.com/faif/python-patterns) en su versión en Ingles, los objetivos de mi traducción son varios.
 
-- Ayudar a programadores de habla hispana.
-- Profundizar al máximo en el aprendizaje de patrones de diseño en Python.
-- Mejorar mi comprensión del Ingles.
+- Ayudar a programadores de **habla hispana**.
+- **Profundizar al máximo** en el aprendizaje de patrones de diseño en Python.
+- Mejorar mi comprensión del **Ingles**.
 
 Disclaimer
 ----------------
 
 Es un proyecto de aprendizaje personal y puede contener errores en la traducción o interpretación
-de los patrones que se explican, ante la posible duda recomiendo acudir a la referencia original.
-También se agradece feedback positivo, mediante "issues" o "pull-requests".
+de los patrones que se explican, ante la posible duda recomiendo acudir a la **referencia original**.
+También se agradece feedback positivo, mediante __"issues"__ o __"pull-requests"__.
 
 
 Patrones actuales
