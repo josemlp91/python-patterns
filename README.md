@@ -24,7 +24,7 @@ __Patrones de creación__:
 | Patrón | Descripción |
 |:-------:| ----------- |
 | [abstract_factory](patterns/creational/abstract_factory.py) | usa una función genérica mediante una factoría específica |
-| [borg](patterns/creational/borg.py) | a singleton with shared-state among instances |
+| [borg](patterns/creational/borg.py) | comportamiento único entre instancias de la misma clase, (estado compartido) |
 | [builder](patterns/creational/builder.py) | instead of using multiple constructors, builder object receives parameters and returns constructed objects |
 | [factory](patterns/creational/factory.py) | delegate a specialized function/method to create instances |
 | [lazy_evaluation](patterns/creational/lazy_evaluation.py) | lazily-evaluated property pattern in Python |
